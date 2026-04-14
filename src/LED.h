@@ -62,18 +62,46 @@ class Led
         void apagar();  
 
     /**
-     * @brief 
+     * @brief liga e desliga o LED a cada meio segundo
      */
         void piscar(); 
+
+     /**
+      * @brief liga e desliga o LED conforme a frequencia decidida
+      * 
+      * @param freq float frequencia
+      *  */   
         void piscar(float freq);
+
+     /** 
+      * @brief liga e desliga o LED conforme a frequencia e a repeticao definida
+      * 
+      * @param freq float frequencia
+      * 
+      * @param repeticoes int repeticoes
+     */ 
         void piscar(float freq, uint16_t repeticoes);
 
+        /** 
+         * @brief alterna o estado do LED (HIGH) ou (LOW)
+        */
         void alternar();    
 
+        /**
+         * @brief setar o estado do LED
+         * 
+         * @param estado 
+         */
         void setEstado(bool estado);   
-
+       
+        /**
+         *@brief pega o pino
+         */
         uint8_t getPino();  
 
+        /**
+         *@brief atualiza a saida do LED 
+         */
         void update();  
 };
 
